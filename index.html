@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Studio | Маникюр</title>
+    <style>
+        /* Базовые настройки и шрифты */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #faf7f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Шапка сайта */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #d4a3a8;
+            text-transform: uppercase;
+            font-size: 24px;
+        }
+
+        /* Главный экран */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #fff 0%, #f4e8e9 100%);
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Кнопка */
+        .btn {
+            display: inline-block;
+            background-color: #d4a3a8;
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(212, 163, 168, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c28b91;
+            transform: translateY(-3px);
+        }
+
+        /* Услуги */
+        .services {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .price-list {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #eee;
+            padding: 15px 0;
+            font-size: 16px;
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .price-item span:last-child {
+            font-weight: 600;
+            color: #d4a3a8;
+        }
+
+        /* Карусель работ */
+        .gallery {
+            padding: 40px 0;
+            text-align: center;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .gallery h2 {
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .marquee-container {
+            display: flex;
+            width: max-content;
+            animation: scroll 30s linear infinite; /* 30 секунд на круг */
+        }
+
+        /* Остановка при наведении */
+        .marquee-container:hover {
+            animation-play-state: paused;
+        }
+
+        .gallery-item {
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #f4e8e9;
+            margin: 0 15px;
+            flex-shrink: 0;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } 
+        }
+
+        /* Подвал */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #333;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nail Studio</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Идеальный маникюр для ваших рук</h2>
+        <p>Современный дизайн, стерильность и уютная атмосфера.</p>
+        <!-- Сюда вставь ссылку на ее ТГ или ВК -->
+        <a href="https://t.me/" class="btn" target="_blank">Записаться онлайн</a>
+    </section>
+
+    <section class="services">
+        <h2>Услуги и цены</h2>
+        <div class="price-list">
+            <div class="price-item">
+                <span>Маникюр с покрытием гель-лак</span>
+                <span>2000 ₽</span>
+            </div>
+            <div class="price-item">
+                <span>Наращивание ногтей</span>
+                <span>3500 ₽</span>
+            </div>
+            <div class="price-item">
+                <span>Дизайн (за 1 ноготь)</span>
+                <span>150 ₽</span>
+            </div>
+            <div class="price-item">
+                <span>Снятие покрытия</span>
+                <span>500 ₽</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Мои работы</h2>
+        <div class="marquee-container">
+            <!-- Первая партия -->
+            <div class="gallery-item">
+                <img src="work1.jpg" alt="Работа 1" onerror="this.src='https://via.placeholder.com/250x250?text=Фото+1'">
+            </div>
+            <div class="gallery-item">
+                <img src="work2.jpg" alt="Работа 2" onerror="this.src='https://via.placeholder.com/250x250?text=Фото+2'">
+            </div>
+            <div class="gallery-item">
+                <img src="work3.jpg" alt="Работа 3" onerror="this.src='https://via.placeholder.com/250x250?text=Фото+3'">
+            </div>
+            <div class="gallery-item">
+                <img src="work4.jpg" alt="Работа 4" onerror="this.src='https://via.placeholder.com/250x250?text=Фото+4'">
+            </div>
+            
+            <!-- Вторая партия (дубликат для бесконечности) -->
+            <div class="gallery-item">
+                <img src="work1.jpg" alt="Работа 1" onerror="this.src='https://via.placeholder.com/250x250?text=Фото+1'">
+            </div>
+            <div class="gallery-item">
+                <img src="work2.jpg" alt="Работа 2" onerror="this.src='https://via.placeholder.com/250x250?text=Фото+2'">
+            </div>
+            <div class="gallery-item">
+                <img src="work3.jpg" alt="Работа 3" onerror="this.src='https://via.placeholder.com/250x250?text=Фото+3'">
+            </div>
+            <div class="gallery-item">
+                <img src="work4.jpg" alt="Работа 4" onerror="this.src='https://via.placeholder.com/250x250?text=Фото+4'">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>г. Зеленодольск | ул. Примерная, д. 1</p>
+        <p>Телефон: +7 (999) 123-45-67</p>
+        <p>&copy; 2026 Nail Studio. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
